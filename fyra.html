@@ -1,0 +1,47 @@
+
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    body {
+        overflow:hidden;
+    }
+    </style>
+    <title></title>
+
+    <iframe id="one" src="" width="49%" height="49%" scrolling="no" border="0" seamless="seamless" frameBorder="0"></iframe>
+    <iframe id="two" src="" width="50%" height="49%" scrolling="no"  border="0" seamless="seamless" frameBorder="0"></iframe>
+    <iframe id="three" src="" width="49%" height="50%" scrolling="no" border="0" seamless="seamless" frameBorder="0"></iframe>
+    <iframe id="four" src="" width="50%" height="50%" scrolling="no"  border="0" seamless="seamless" frameBorder="0"></iframe>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<script>
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+document.getElementById('one').src =getParameterByName("one");
+document.getElementById('two').src =getParameterByName("two");
+document.getElementById('three').src =getParameterByName("three");
+document.getElementById('four').src =getParameterByName("four");
+
+</script>
+
+  </body>
+</html>
